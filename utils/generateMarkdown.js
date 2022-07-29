@@ -1,49 +1,47 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
+  console.log(license)
   switch (license) {
     case 'Apache 2.0':
-    return  
-    "[![License](https://img.shields.io/badge/License-Apache_2.0-yellowgreen.svg)] " ;
+    return  "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) ";
     case 'BSD':
-      return
-    "[![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)] "; 
+      return "[![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause) "; 
     case 'MIT':
-      return
-      "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)" ;  
+      return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)" ;  
     default:
-      return "" ;    
+  return "" ;    
   }
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-//function renderLicenseLink(license) {
-function renderLicenseLink(licLink) {
-    switch (licLink) {
-      case 'Apache 2.0':
-      return  
-     "(https://opensource.org/licenses/Apache-2.0)";
-      case 'BSD':
-      return
-        "(https://opensource.org/licenses/BSD-2-Clause) "; 
-    case 'MIT':
-      return
-        "(https://opensource.org/licenses/MIT)";  
-    default:
-      return "" ;   
+function renderLicenseLink(license) {
+  if (license === 'none') {
+return ""
+  }
+  else{
+    return "- [License](#license)"
   }
 }
+  
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection({#licSect}) {
-//  ${license}
-//  ${licLink}
+function renderLicenseSection(license) {
+if (license === 'none') {
+  return ""
+}
+else{
+  return `## License  
+  This project is built on ${license} license `
+}
 }
 // TODO: Create a function to generate markdown for README
-function generateMarkdown({ title, descr, license, install, usage, email, contrib, tests, github})   
-{return `# ${title}
+
+function generateMarkdown({title, descr, license, licLink, install, usage, email, contrib, tests, github})  { 
+//function generateMarkdown(answers) 
+return `# ${title}
 
 ${renderLicenseBadge(license)}
 
@@ -51,17 +49,13 @@ ${renderLicenseBadge(license)}
 
 ## Table of Contents
 
-- [Installation]{#install}
+- [Installation](#install)
+- [Usage](#usage)
+- [Contributing](#contrib)
+${renderLicenseLink(license)}
+- [Test](#tests)
 
-- [Usage]{#usage}
-
-- [Contributing]{#contrib}
-
-- [License]{#license}
-
-- [Test]{#tests}
-
-- [Questions]{#Questions}
+- [Questions](#Questions)
 
 ## Installation
 
@@ -75,16 +69,15 @@ ${usage}
 
 ${contrib}
 
-## License
-
-${license}
+${renderLicenseSection(license)} 
 
 ## Tests
 
 ${tests}
 
 ## Questions
-If you have any questions, please contact me through my github ${github} or email me at ${email}.
+If you have any questions, please contact me through my 
+github [${github}] or email me at [${email}](mailto:${email}).
   `
 }
 module.exports = generateMarkdown;

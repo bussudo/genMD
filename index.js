@@ -12,7 +12,7 @@ const questions = [{
     type:'list',
     name:'license',
     message:"What license do you need?",
-    choices:['Apache 2.0','BSD','MIT']
+    choices:['Apache 2.0','BSD','MIT','none']
 },
 {  type:"input",
     name:"descr",
