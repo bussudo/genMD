@@ -1,37 +1,35 @@
-# sd
+# GenMD
 
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) 
 
-## ds
+
+## generate a quality readme.MD file based on user responses
 
 ## Table of Contents
 
 - [Installation](#install)
 - [Usage](#usage)
 - [Contributing](#contrib)
-- [License](#license)
-- [Test](#tests)
 
+- [Test](#tests)
 - [Questions](#Questions)
 
 ## Installation
 
-d
+N/A
 
 ## Usage
 
-d
+new readme file for a new project
 
 ## Contributing
 
-d
+please contact me through github or email
 
-## License  
-  This project is built on Apache 2.0 license  
+ 
 
 ## Tests
 
-d
+none
 
 ## Questions
 If you have any questions, please contact me through my 

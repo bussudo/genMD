@@ -19,7 +19,7 @@ const questions = [{
     message:"Write a description of your project"
 },
 {  type:"input",
-    name:"install",
+    name:"installation",
     message:"Include installation instructions"
 },
 {  type:"input",
@@ -27,7 +27,7 @@ const questions = [{
     message:"Describe the use case for this product"
 },
 {  type:"input",
-    name:"contrib",
+    name:"contributing",
     message:"Enter any contributing guidelines"
 },
 {  type:"input",
@@ -48,7 +48,7 @@ const questions = [{
 function init() {
     inquirer.prompt(questions)
     .then((answers)=>{
-       fs.writeFile('Readme.MD', generateMarkdown(answers), (error)=>{
+       fs.writeFile('./Readme.MD', generateMarkdown(answers), (error)=>{
         if (error){
             throw(error)
         }

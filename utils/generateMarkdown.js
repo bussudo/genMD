@@ -39,7 +39,7 @@ else{
 }
 // TODO: Create a function to generate markdown for README
 
-function generateMarkdown({title, descr, license, licLink, install, usage, email, contrib, tests, github})  { 
+function generateMarkdown({title, descr, license, install, usage, email, contrib, tests, github, email})  { 
 //function generateMarkdown(answers) 
 return `# ${title}
 
@@ -49,13 +49,11 @@ ${renderLicenseBadge(license)}
 
 ## Table of Contents
 
-- [Installation](#install)
+- [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contrib)
+- [Contributing](#contributing)
 ${renderLicenseLink(license)}
-- [Test](#tests)
-
-- [Questions](#Questions)
+- [Tests](#tests)
 
 ## Installation
 
