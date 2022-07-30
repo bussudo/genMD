@@ -1,37 +1,49 @@
-# GenMD
+# GenMD - Generate ReadME.MD File
+
+# About Project
 
 
+Using the inquirer and FS libraries, the user is guided through a series of questions in a command-line application which in turn populate the newly generated Readme.MD file.
 
-## generate a quality readme.MD file based on user responses
+The application will be invoked by using the following command:
 
-## Table of Contents
+```bash
+node index.js
+```
 
-- [Installation](#install)
-- [Usage](#usage)
-- [Contributing](#contrib)
+Two demo videos were captured, one which shows the including of a license, and one without.
+chrome-extension://mmeijimgabbpbgpdklnllpncmdofkcpn/app.html#/files/628c0452-5058-468a-y3d7-fb159b67c001
+chrome-extension://mmeijimgabbpbgpdklnllpncmdofkcpn/app.html#/files/dc4591eb-e4d7-4305-ye7f-271728e742f9
 
-- [Test](#tests)
-- [Questions](#Questions)
 
-## Installation
+## User Story
 
-N/A
+```md
+AS A developer
+I WANT a README generator
+SO THAT I can quickly create a professional README for a new project
+```
 
-## Usage
+## Acceptance Criteria
 
-new readme file for a new project
+```md
+GIVEN a command-line application that accepts user input
+WHEN I am prompted for information about my application repository
+THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
+WHEN I enter my project title
+THEN this is displayed as the title of the README
+WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
+THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
+WHEN I choose a license for my application from a list of options
+THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
+WHEN I enter my GitHub username
+THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
+WHEN I enter my email address
+THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
+WHEN I click on the links in the Table of Contents
+THEN I am taken to the corresponding section of the README
+```
 
-## Contributing
+---
 
-please contact me through github or email
-
- 
-
-## Tests
-
-none
-
-## Questions
-If you have any questions, please contact me through my 
-github [https://github.com/bussudo/genMD] or email me at [bussudo@gmail.com](mailto:bussudo@gmail.com).
-  
+© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
